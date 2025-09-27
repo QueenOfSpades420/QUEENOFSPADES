@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Queen of Spades</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cinzel', serif;
+      background: linear-gradient(to bottom, #000000, #1a1a1a);
+      color: #f5f5f5;
+      text-align: center;
+    }
+    header {
+      padding: 2rem;
+      background-color: #111;
+      border-bottom: 2px solid #444;
+    }
+    .logo {
+      font-size: 2.5rem;
+      color: gold;
+      letter-spacing: 2px;
+    }
+    .tagline {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 2rem auto;
+      gap: 2rem;
+      max-width: 1000px;
+    }
+    .product {
+      background-color: #222;
+      border: 1px solid #555;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 280px;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 6px;
+    }
+    .product h3 {
+      margin: 0.5rem 0;
+      color: gold;
+    }
+    .product p {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    .buy-button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: gold;
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">👑 Queen of Spades</div>
+    <div class="tagline">Web3 Royalty. Lore-backed. Token-powered.</div>
+  </header>
+
+  <section class="product-grid">
+    <div class="product">
+      <img src="queen-nft-placeholder.jpg" alt="Queen NFT" />
+      <h3>Queen NFT Tier I</h3>
+      <p>Unlock lore, staking access, and early governance rights.</p>
+      <button class="buy-button" onclick="startCheckout('product_id_1')">Buy with Crypto</button>
+    </div>
+    <div class="product">
+      <img src="queen-token-placeholder.jpg" alt="Queen Token" />
+      <h3>Queen of Spades Token</h3>
+      <p>ERC20 token with cult-like utility and surreal FX triggers.</p>
+      <button class="buy-button" onclick="startCheckout('product_id_2')">Buy with Crypto</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Queen of Spades. Powered by lore, Ethereum, and Coinbase Commerce.
+  </footer>
+
+  <!-- Coinbase Commerce Integration -->
+  <script src="https://commerce.coinbase.com/v1/checkout.js"></script>
+  <script>
+    function startCheckout(productId) {
+      CoinbaseCommerce.checkout(productId);
+    }
+  </script>
+</body>
+</html>
